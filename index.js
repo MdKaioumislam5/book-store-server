@@ -48,7 +48,7 @@ async function run(){
           res.send(result);
         })
 
-        // create api
+        // // create api
         app.post ("/inventories", async (req, res) => {
           const order = req.body;
           const result = await serviceCollection.insertOne(order)
