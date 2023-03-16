@@ -44,6 +44,7 @@ async function run(){
         });
 
         app.get("/myItems", async (req, res) => {
+          // console.log(req.headers.authorization);
           let query = {}
           if(req.query.email){
             query = {
