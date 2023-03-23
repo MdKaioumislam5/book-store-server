@@ -63,20 +63,19 @@ async function run(){
           res.send(result);
         });
 
+        // delete api
         app.delete("/inventories/:id", async (req, res) => {
           const id = req.params.id;
           const query = {_id: new ObjectId(id)}
           const result = await serviceCollection.deleteOne(query)
           res.send(result);
         });
-        
     }
     finally{
 
     }
 }
 run().catch((err) => console.error(err));
-
 
 app.get("/", (req, res) => {
   res.send("Yay, My server is working");
